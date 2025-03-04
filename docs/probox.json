@@ -1,0 +1,153 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Probox API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "https://probox-supabase.vercel.app"
+    }
+  ],
+<<<<<<< HEAD
+  "components": {
+    "securitySchemes": {
+      "apiKeyAuth": {
+        "type": "apiKey",
+        "name": "Authorization",
+        "in": "header"
+      }
+    }
+  },
+  "paths": {
+    "/api/probox": {
+      "get": {
+        "summary": "GET Last Data",
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+=======
+  "paths": {
+    "/api/probox": {
+      "get": {
+        "summary": "Get last data",
+>>>>>>> 30b590663edadcd8a7b7dae1ef3e93588e0b4d40
+        "responses": {
+          "200": {
+            "description": "GET last data success",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 200,
+                  "data": [
+                    {
+                      "id": 6,
+                      "uid": "BE8JT6",
+                      "status": "TIDAK ADA BARANG",
+                      "selenoid": "TUTUP",
+                      "timestamp": "2023-08-24 13:49:06"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 500,
+                  "errors": [
+                    {
+                      "message": "Internal Server Error"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/probox/history": {
+      "get": {
+        "summary": "Get all history data",
+<<<<<<< HEAD
+        "security": [
+          {
+            "apiKeyAuth": []
+          }
+        ],
+=======
+>>>>>>> 30b590663edadcd8a7b7dae1ef3e93588e0b4d40
+        "responses": {
+          "200": {
+            "description": "GET all history success",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 200,
+                  "data": [
+                    {
+                      "id": 5,
+                      "uid": "BE8JT6",
+                      "status": "ADA BARANG",
+                      "selenoid": "BUKA",
+                      "timestamp": "2023-08-24 13:49:06"
+                    },
+                    {
+                      "id": 4,
+                      "uid": "BE8JT6",
+                      "status": "TIDAK ADA BARANG",
+                      "selenoid": "TUTUP",
+                      "timestamp": "2023-08-24 13:49:06"
+                    },
+                    {
+                      "id": 3,
+                      "uid": "BE8JT6",
+                      "status": "ADA BARANG",
+                      "selenoid": "BUKA",
+                      "timestamp": "2023-08-24 13:49:06"
+                    },
+                    {
+                      "id": 2,
+                      "uid": "BE8JT6",
+                      "status": "TIDAK ADA BARANG",
+                      "selenoid": "TUTUP",
+                      "timestamp": "2023-08-24 13:49:06"
+                    },
+                    {
+                      "id": 1,
+                      "uid": "BE8JT6",
+                      "status": "ADA BARANG",
+                      "selenoid": "BUKA",
+                      "timestamp": "2023-08-24 13:49:06"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "example": {
+                  "status": 500,
+                  "errors": [
+                    {
+                      "message": "Internal Server Error"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
