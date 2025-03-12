@@ -21,13 +21,15 @@ const getAllHistory = async () => {
     .order("id", { ascending: false });
 
   if (error) {
+    console.error("Supabase Error:", error);
     throw error;
   }
 
-  const historyData = data.slice(1, data.length - 0);
+  console.log("Supabase Data:", data); // Debugging
 
-  return historyData;
+  return data; // Return all data without slicing
 };
+
 
 module.exports = {
   getAllHistory,
